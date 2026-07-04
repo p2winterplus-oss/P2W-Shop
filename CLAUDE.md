@@ -15,7 +15,7 @@
 ```
 /shop              → hub เลือกหมวดสินค้า
 /shop/frozen       → อาหารแช่แข็ง
-/shop/snack        → อาหารแปรรูป ขนม เค้ก
+/shop/bakery       → อาหารแปรรูป ขนม เค้ก
 /shop/pet          → อาหารสัตว์
 /shop/general      → สินค้าทั่วไป
 /shop/secondhand   → สินค้ามือสอง
@@ -24,19 +24,22 @@
 ## โครงสร้างไฟล์
 ```
 P2W Shop\
-  index.html             → hub (เลือกหมวด)
-  frozen\index.html      → อาหารแช่แข็ง
-  snack\index.html       → อาหารแปรรูป ขนม เค้ก
-  pet\index.html         → อาหารสัตว์
-  general\index.html     → สินค้าทั่วไป
-  secondhand\index.html  → สินค้ามือสอง
+  index.html                 → hub (หน้าแรก: อธิบายหมวด + วิธีสั่งซื้อ + ข้อมูลบริษัท)
+  assets\app.js              → shared component (header/footer/สินค้า) + ข้อมูลร้าน + ข้อมูลสินค้า
+  frozen\index.html          → อาหารแช่แข็ง (ธีมฟ้า sky)
+  bakery\index.html          → ขนม เค้ก เบเกอรี่ (ธีมส้ม orange)
+  pet\index.html             → อาหารสัตว์ (ธีมเขียว emerald)
+  general\index.html         → สินค้าทั่วไป (ธีมม่วง indigo)
+  secondhand\index.html      → สินค้ามือสอง (ธีมเหลือง amber)
 ```
+
+> **แก้ข้อมูลสินค้า/ร้าน**: แก้ที่ `assets\app.js` ไฟล์เดียว (ตัวแปร `SITE` = ข้อมูลร้าน, `PRODUCTS` = สินค้าแต่ละหมวด) header/footer/การ์ดสินค้าทุกหน้าดึงจากที่นี่
 
 ## ลูกค้าแต่ละหมวด
 | หมวด | กลุ่มลูกค้า |
 |------|------------|
 | frozen | แม่บ้าน, คนทำกับข้าว, ร้านอาหาร |
-| snack | คนซื้อขนม/ของว่าง, คนซื้อของฝาก |
+| bakery | คนซื้อขนม/ของว่าง, คนซื้อของฝาก |
 | pet | เจ้าของสัตว์เลี้ยง |
 | general | ลูกค้าทั่วไป |
 | secondhand | คนมองหาสินค้ามือสองราคาประหยัด |
@@ -55,18 +58,21 @@ P2W Shop\
 
 ## Progress
 ### Done ✅
-- สร้าง index.html — single-page catalog รวม 5 หมวด (frozen/bakery/pet/general/secondhand) พร้อมปุ่ม LINE OA ทุกจุด
+- สร้างเว็บ **multi-page** — หน้าแรก (hub) + 5 หน้าหมวด แยกโฟลเดอร์ตาม URL plan แต่ละหน้าธีมสีของตัวเอง
+- shared component `assets/app.js` (header มีปุ่มหน้าแรก/footer/การ์ดสินค้า + ข้อมูลร้าน + ข้อมูลสินค้า)
+- หน้าแรกอธิบายหมวด + วิธีสั่งซื้อ 3 ขั้น + ข้อมูลบริษัท (เพื่อความน่าเชื่อถือ)
 - สร้าง repo GitHub: https://github.com/p2winterplus-oss/P2W-Shop
-- Deploy GitHub Pages สำเร็จ → https://p2winterplus-oss.github.io/P2W-Shop/
+- Deploy GitHub Pages + Cloudflare Worker `p2w-shop` → **https://p2winterplus.com/shop** ✅ Live
 
 ### In Progress 🔄
 -
 
 ### Next ❌
-- แทนรูป placehold.co ด้วยรูปสินค้าจริง
+- แทนรูป placehold.co ด้วยรูปสินค้าจริง (แก้ที่ `assets/app.js` → `PRODUCTS`)
 - แก้ชื่อ/ราคา/รหัสสินค้าให้ตรงของจริง
-- ตั้ง redirect/proxy p2winterplus.com/shop → GitHub Pages (รอเว็บหลักพร้อม)
 
 ## หมายเหตุ implementation
-- ตอนนี้ทำเป็น **single-page** (index.html หน้าเดียว โชว์ทั้ง 5 หมวดเป็น section + anchor link) ยังไม่ได้แยกเป็นโฟลเดอร์ย่อยตาม URL plan เดิม
+- โครงสร้าง **multi-page**: หน้าแรก `index.html` เป็น hub, แต่ละหมวดแยกโฟลเดอร์ (`/frozen/`, `/bakery/`, `/pet/`, `/general/`, `/secondhand/`) → map กับ URL `/shop/<หมวด>/`
+- header/footer/การ์ดสินค้า render จาก `assets/app.js` (Tailwind Play CDN สร้าง class จาก DOM ที่ inject ได้) — แก้ครั้งเดียวมีผลทุกหน้า
+- ทุก link ใช้ relative path (`../frozen/` ฯลฯ) → ทำงานได้ทั้งบน github.io และ p2winterplus.com/shop
 - git identity ของ repo (local): P2W Interplus / p2w.interplus@gmail.com
