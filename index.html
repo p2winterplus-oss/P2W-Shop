@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2W COMMERCE | แคตตาล็อกสินค้าออนไลน์</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f8fafc; /* พื้นหลังสว่าง สะอาดตา */
+            color: #1e293b;
+        }
+        .line-color { background-color: #00B900; }
+        .line-color-hover:hover { background-color: #009900; }
+        .text-line { color: #00B900; }
+
+        /* ซ่อน Scrollbar สำหรับแนวนอนถ้ามี */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-xl tracking-tighter shadow-md">
+                        P2W
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-tight tracking-wider uppercase text-gray-900">Commerce</h1>
+                        <p class="text-[10px] text-gray-500 tracking-widest font-medium">OFFICIAL CATALOG</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#frozen" class="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium">แช่แข็ง</a>
+                    <a href="#bakery" class="text-gray-600 hover:text-orange-500 transition-colors text-sm font-medium">เบเกอรี่</a>
+                    <a href="#pet" class="text-gray-600 hover:text-green-600 transition-colors text-sm font-medium">สัตว์เลี้ยง</a>
+                    <a href="#general" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm font-medium">สินค้าทั่วไป</a>
+                    <a href="#secondhand" class="text-gray-600 hover:text-amber-600 transition-colors text-sm font-medium">มือสอง</a>
+                    <a href="#how-to-order" class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">วิธีสั่งซื้อ</a>
+
+                    <!-- Line CTA Button -->
+                    <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="inline-flex items-center gap-2 line-color line-color-hover text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-md shadow-green-200">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>แอด LINE สั่งซื้อ</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-xs font-semibold tracking-wider mb-6 border border-blue-100">
+                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                CATALOG SHOWCASE 2026
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+                แหล่งรวมสินค้าคุณภาพ <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">เลือกง่าย สั่งไว ผ่านแชท LINE</span>
+            </h2>
+            <p class="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
+                จดรหัสสินค้า หรือแคปหน้าจอสิ่งที่คุณถูกใจ แล้วส่งให้แอดมินของเราจัดการต่อได้เลย สะดวก รวดเร็ว พร้อมจัดส่งถึงหน้าบ้าน
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#how-to-order" class="w-full sm:w-auto px-8 py-3 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors">
+                    ดูวิธีการสั่งซื้อ
+                </a>
+                <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-3 rounded-full line-color line-color-hover text-white font-semibold flex items-center justify-center gap-2 transition-all shadow-lg shadow-green-200">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> ทักแชทแอดมิน
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- หมวดหมู่: แช่แข็ง (Theme: Blue) -->
+    <section id="frozen" class="py-16 bg-blue-50/70 border-t border-blue-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center shadow-sm">
+                    <i data-lucide="snowflake" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900">อาหารแช่แข็ง / วัตถุดิบ</h3>
+                    <p class="text-blue-600 text-sm font-medium">FROZEN FOOD & INGREDIENTS</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product FZ 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-blue-100">FZ-001</span>
+                        <img src="https://placehold.co/400x400/bfdbfe/1e3a8a?text=Wagyu+A4" alt="เนื้อวากิว" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-blue-600 transition-colors">เนื้อวากิว A4 สไลซ์พรีเมียม (แพ็ค 250g)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">เหมาะสำหรับชาบูและปิ้งย่าง ลายหินอ่อนสวยงาม</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿890</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product FZ 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-blue-100">FZ-002</span>
+                        <img src="https://placehold.co/400x400/bfdbfe/1e3a8a?text=Salmon" alt="แซลมอน" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-blue-600 transition-colors">ปลาแซลมอนนอร์เวย์ หั่นชิ้นแช่แข็ง (500g)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">สดใหม่ แพ็คสูญญากาศอย่างดี รักษารสชาติ</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿450</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หมวดหมู่: เบเกอรี่ (Theme: Orange) -->
+    <section id="bakery" class="py-16 bg-orange-50/60 border-t border-orange-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-500 flex items-center justify-center shadow-sm">
+                    <i data-lucide="coffee" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900">อาหารสำเร็จรูป / เบเกอรี่</h3>
+                    <p class="text-orange-500 text-sm font-medium">BAKERY & SWEETS</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product BK 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-orange-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-orange-600 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-orange-100">BK-015</span>
+                        <img src="https://placehold.co/400x400/fed7aa/9a3412?text=Brownie" alt="บราวนี่" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-orange-500 transition-colors">พรีเมียมดาร์กช็อกโกแลต บราวนี่ (กล่อง 6 ชิ้น)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">เนื้อหนึบ เข้มข้น หวานน้อย อร่อยเต็มคำ</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿280</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product BK 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-orange-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-orange-600 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-orange-100">BK-022</span>
+                        <img src="https://placehold.co/400x400/fed7aa/9a3412?text=Croissant" alt="ครัวซองต์" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-orange-500 transition-colors">ครัวซองต์เนยสดฝรั่งเศส (แพ็ค 4 ชิ้น)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">หอมเนยแท้ กรอบนอกนุ่มใน อบใหม่ทุกวัน</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿320</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หมวดหมู่: สัตว์เลี้ยง (Theme: Green) -->
+    <section id="pet" class="py-16 bg-emerald-50/70 border-t border-emerald-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shadow-sm">
+                    <i data-lucide="bone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900">อาหารสัตว์เลี้ยง</h3>
+                    <p class="text-emerald-600 text-sm font-medium">PET FOOD & CARE</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product PT 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-emerald-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-emerald-100">PT-008</span>
+                        <img src="https://placehold.co/400x400/a7f3d0/065f46?text=Dog+Food" alt="อาหารสุนัข" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-emerald-600 transition-colors">อาหารสุนัขสูตร Grain Free (กระสอบ 10kg)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">โปรตีนสูง สำหรับสุนัขโต บำรุงกระดูกและข้อต่อ</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿1,250</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Product PT 2 -->
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-emerald-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-emerald-100">PT-012</span>
+                        <img src="https://placehold.co/400x400/a7f3d0/065f46?text=Cat+Snack" alt="ขนมแมว" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-emerald-600 transition-colors">ขนมแมวเลีย รสทูน่าผสมแซลมอน (แพ็ค 20 ซอง)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">อร่อย ทานง่าย บำรุงขนให้นุ่มสลวย</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿150</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หมวดหมู่: สินค้าทั่วไป (Theme: Indigo/Grey) -->
+    <section id="general" class="py-16 bg-indigo-50/40 border-t border-indigo-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center shadow-sm">
+                    <i data-lucide="package" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900">สินค้าทั่วไป / ของใช้</h3>
+                    <p class="text-indigo-600 text-sm font-medium">GENERAL GOODS & LIFESTYLE</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product GN 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-indigo-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100">GN-104</span>
+                        <img src="https://placehold.co/400x400/e0e7ff/3730a3?text=Tumbler" alt="แก้วน้ำ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-indigo-600 transition-colors">แก้วเก็บความเย็น สแตนเลส 304 (ขนาด 30oz)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">เก็บน้ำแข็งได้นานกว่า 12 ชม. ไม่เกิดหยดน้ำเกาะ</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿390</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product GN 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-indigo-100 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-indigo-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100">GN-112</span>
+                        <img src="https://placehold.co/400x400/e0e7ff/3730a3?text=Tissue" alt="ทิชชู่" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-indigo-600 transition-colors">กระดาษทิชชู่เช็ดหน้า หนา 3 ชั้น (แพ็ค 5 ห่อ)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">นุ่ม อ่อนโยน ไม่เป็นขุย ปลอดภัยสำหรับผิวหน้า</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿85</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หมวดหมู่: มือสอง (Theme: Amber/Yellow) -->
+    <section id="secondhand" class="py-16 bg-amber-50/70 border-t border-amber-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center shadow-sm">
+                    <i data-lucide="recycle" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900">สินค้ามือสอง / สภาพดี</h3>
+                    <p class="text-amber-600 text-sm font-medium">SECOND-HAND & CLEARANCE</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product SH 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-amber-200 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-amber-200">SH-003</span>
+                        <div class="absolute top-3 right-3 z-10 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm tracking-wide">USED</div>
+                        <img src="https://placehold.co/400x400/fef3c7/b45309?text=Camera" alt="กล้องมือสอง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-amber-600 transition-colors">กล้องดิจิตอลวินเทจ (สภาพ 90%)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">ใช้งานได้ปกติ มีรอยตามการใช้งาน พร้อมแบตเตอรี่</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿2,500</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Product SH 2 -->
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-amber-200 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1">
+                    <div class="relative aspect-square overflow-hidden bg-gray-50">
+                        <span class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm border border-amber-200">SH-018</span>
+                        <div class="absolute top-3 right-3 z-10 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-sm tracking-wide">USED</div>
+                        <img src="https://placehold.co/400x400/fef3c7/b45309?text=Furniture" alt="เฟอร์นิเจอร์" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 md:p-5 flex flex-col flex-grow">
+                        <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2 text-sm md:text-base group-hover:text-amber-600 transition-colors">เก้าอี้สำนักงานเพื่อสุขภาพ (สภาพ 85%)</h4>
+                        <p class="text-xs text-gray-500 mb-3 line-clamp-1">เบาะแน่น ขาเหล็กแข็งแรง ปรับระดับได้ปกติ</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between border-t border-gray-100">
+                            <span class="text-gray-900 font-bold text-lg">฿900</span>
+                            <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-green-50 text-[#00B900] hover:bg-[#00B900] hover:text-white flex items-center justify-center transition-colors shadow-sm" title="สั่งซื้อผ่าน LINE">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- วิธีการสั่งซื้อ (How to Order) -->
+    <section id="how-to-order" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-3xl p-8 md:p-12 relative overflow-hidden border border-gray-200 shadow-sm">
+                <div class="text-center mb-10 relative z-10">
+                    <span class="inline-block py-1 px-3 rounded-full bg-green-100 text-green-700 text-xs font-bold tracking-wider mb-4">HOW TO ORDER</span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">สั่งซื้อง่ายๆ ใน 3 ขั้นตอน</h3>
+                    <p class="text-gray-500">ไม่ต้องสมัครสมาชิกให้ยุ่งยาก แค่มีแอป LINE ก็สั่งได้เลย</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-4 mx-auto text-xl">1</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">เลือกรหัสสินค้า</h4>
+                        <p class="text-gray-500 text-sm">ดูแคตตาล็อกบนเว็บไซต์และจดรหัส (เช่น FZ-001) หรือแคปหน้าจอรูปสินค้าที่คุณต้องการ</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md text-center transform md:-translate-y-2 ring-1 ring-green-500/20">
+                        <div class="w-12 h-12 rounded-full bg-green-100 text-[#00B900] flex items-center justify-center font-bold mb-4 mx-auto text-xl shadow-inner">2</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">ทักแชท LINE</h4>
+                        <p class="text-gray-500 text-sm">คลิกปุ่มแอดไลน์ด้านล่าง ส่งรูปหรือรหัสสินค้าให้แอดมิน เพื่อเช็กสต็อกและสรุปยอด</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4 mx-auto text-xl">3</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">โอนเงิน & รอรับของ</h4>
+                        <p class="text-gray-500 text-sm">ชำระเงินตามยอดที่แอดมินแจ้ง เราจะจัดส่งสินค้าและแจ้งเลขพัสดุให้คุณทราบทันที</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center relative z-10">
+                    <a href="https://lin.ee/QJax26d" target="_blank" rel="noopener" class="inline-flex items-center gap-2 line-color line-color-hover text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-green-200 transform hover:-translate-y-1 hover:scale-105">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        แอด LINE สั่งซื้อเลย
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        P2W
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold text-white tracking-wider">COMMERCE</h4>
+                        <p class="text-[10px] text-gray-400 tracking-widest">BY P2W INTERPLUS</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="#frozen" class="hover:text-white transition-colors">แช่แข็ง</a>
+                    <a href="#bakery" class="hover:text-white transition-colors">เบเกอรี่</a>
+                    <a href="#pet" class="hover:text-white transition-colors">อาหารสัตว์</a>
+                    <a href="#general" class="hover:text-white transition-colors">สินค้าทั่วไป</a>
+                    <a href="#secondhand" class="hover:text-white transition-colors">มือสอง</a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-800 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 P2W Interplus Group. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex items-center gap-4">
+                    <span class="text-green-400 font-medium flex items-center gap-1">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> LINE: @P2WCommerce
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons for vector graphics
+        lucide.createIcons();
+    </script>
+</body>
+</html>
