@@ -5,14 +5,14 @@
    ===================================================================== */
 
 const SITE = {
-  brandTop: 'COMMERCE',
+  brandTop: 'Infinis Foods',
   brandSub: 'BY P2W INTERPLUS',
   company: 'P2W INTERPLUS CO., LTD.',
   phone: '088-788-8364',
   email: 'p2w.interplus@gmail.com',
   address: '49/306 ซ.นิมิตใหม่ 40 ถ.นิมิตใหม่ แขวงสามวาตะวันออก เขตคลองสามวา กรุงเทพฯ 10510',
-  line: 'https://lin.ee/QJax26d',
-  lineName: '@P2WCommerce',
+  line: 'https://lin.ee/wnizCXu',
+  lineName: 'Line Official',
   categories: [
     { slug: 'frozen',     label: 'อาหารแช่แข็ง', en: 'FROZEN FOOD',     icon: 'snowflake',   desc: 'เนื้อสัตว์ อาหารทะเล และวัตถุดิบแช่แข็งคุณภาพ เก็บความสดได้ยาวนาน พร้อมปรุง' },
     { slug: 'bakery',     label: 'ขนม เค้ก เบเกอรี่', en: 'BAKERY & SWEETS', icon: 'cake',    desc: 'ขนม เค้ก เบเกอรี่ และอาหารแปรรูป อบสดใหม่ คัดวัตถุดิบอย่างดี' },
@@ -116,10 +116,10 @@ function headerHTML(base, active) {
   <div class="bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16 md:h-[68px] flex items-center justify-between gap-4">
       <a href="${homeHref}" class="flex items-center gap-3 shrink-0">
-        <img src="${base}assets/logo-mark.png" alt="P2W INTERPLUS" class="h-9 md:h-10 w-auto">
-        <span class="hidden sm:flex flex-col leading-none border-l border-slate-200 pl-3">
-          <span class="text-sm md:text-base font-bold tracking-[0.25em] text-slate-900">${SITE.brandTop}</span>
-          <span class="text-[10px] text-slate-400 tracking-wider mt-1">ร้านค้าออนไลน์อย่างเป็นทางการ</span>
+        <img src="${base}assets/infinis-mark.png" alt="Infinis Foods" class="h-10 md:h-11 w-auto">
+        <span class="flex flex-col leading-none border-l border-slate-200 pl-3">
+          <span class="text-base md:text-lg font-bold tracking-wide text-slate-900">${SITE.brandTop}</span>
+          <span class="hidden sm:block text-[10px] text-slate-400 tracking-wider mt-1">ร้านค้าออนไลน์อย่างเป็นทางการ</span>
         </span>
       </a>
 
@@ -155,9 +155,9 @@ function footerHTML(base) {
     <div class="max-w-7xl mx-auto px-4 lg:px-8 py-12 grid gap-10 md:grid-cols-4">
       <div class="md:col-span-1">
         <a href="${homeHref}" class="flex items-center gap-3 mb-4">
-          <img src="${base}assets/logo-mark-white.png" alt="P2W INTERPLUS" class="h-9 w-auto">
+          <img src="${base}assets/infinis-mark.png" alt="Infinis Foods" class="h-10 w-auto">
           <span class="flex flex-col leading-none border-l border-white/20 pl-3">
-            <span class="font-bold tracking-[0.25em] text-white">${SITE.brandTop}</span>
+            <span class="text-lg font-bold tracking-wide text-white">${SITE.brandTop}</span>
             <span class="text-[10px] text-slate-400 tracking-wider mt-1">${SITE.brandSub}</span>
           </span>
         </a>
@@ -175,7 +175,7 @@ function footerHTML(base) {
         <ul class="space-y-3 text-sm text-slate-400">
           <li class="flex items-start gap-2"><i data-lucide="phone" class="w-4 h-4 mt-0.5 shrink-0"></i><span>${SITE.phone}</span></li>
           <li class="flex items-start gap-2"><i data-lucide="mail" class="w-4 h-4 mt-0.5 shrink-0"></i><span>${SITE.email}</span></li>
-          <li class="flex items-start gap-2"><i data-lucide="message-circle" class="w-4 h-4 mt-0.5 shrink-0"></i><span>LINE ${SITE.lineName}</span></li>
+          <li class="flex items-start gap-2"><i data-lucide="message-circle" class="w-4 h-4 mt-0.5 shrink-0"></i><a href="${SITE.line}" target="_blank" rel="noopener" class="hover:text-white transition-colors">${SITE.lineName}</a></li>
           <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0"></i><span>${SITE.address}</span></li>
         </ul>
       </div>
@@ -194,7 +194,7 @@ function footerHTML(base) {
     <div class="border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-500">
         <p>&copy; 2026 ${SITE.company} สงวนลิขสิทธิ์</p>
-        <p class="text-slate-400">LINE ${SITE.lineName}</p>
+        <p class="text-slate-400">${SITE.brandTop}</p>
       </div>
     </div>
   </div>`;
