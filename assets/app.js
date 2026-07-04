@@ -116,11 +116,11 @@ function headerHTML(base, active) {
   <div class="bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16 md:h-[68px] flex items-center justify-between gap-4">
       <a href="${homeHref}" class="flex items-center gap-3 shrink-0">
-        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg tracking-tighter shadow-sm">P2W</div>
-        <div class="leading-tight">
-          <div class="font-bold text-base md:text-lg tracking-wider uppercase text-slate-900">${SITE.brandTop}</div>
-          <div class="text-[10px] text-slate-400 tracking-widest font-medium">${SITE.brandSub}</div>
-        </div>
+        <img src="${base}assets/logo-mark.png" alt="P2W INTERPLUS" class="h-9 md:h-10 w-auto">
+        <span class="hidden sm:flex flex-col leading-none border-l border-slate-200 pl-3">
+          <span class="text-sm md:text-base font-bold tracking-[0.25em] text-slate-900">${SITE.brandTop}</span>
+          <span class="text-[10px] text-slate-400 tracking-wider mt-1">ร้านค้าออนไลน์อย่างเป็นทางการ</span>
+        </span>
       </a>
 
       <nav class="hidden lg:flex items-center gap-6">
@@ -155,8 +155,11 @@ function footerHTML(base) {
     <div class="max-w-7xl mx-auto px-4 lg:px-8 py-12 grid gap-10 md:grid-cols-4">
       <div class="md:col-span-1">
         <a href="${homeHref}" class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-sm">P2W</div>
-          <div class="leading-tight"><div class="font-bold text-white tracking-wider">${SITE.brandTop}</div><div class="text-[10px] text-slate-400 tracking-widest">${SITE.brandSub}</div></div>
+          <img src="${base}assets/logo-mark-white.png" alt="P2W INTERPLUS" class="h-9 w-auto">
+          <span class="flex flex-col leading-none border-l border-white/20 pl-3">
+            <span class="font-bold tracking-[0.25em] text-white">${SITE.brandTop}</span>
+            <span class="text-[10px] text-slate-400 tracking-wider mt-1">${SITE.brandSub}</span>
+          </span>
         </a>
         <p class="text-sm text-slate-400 leading-relaxed mb-4">ร้านค้าออนไลน์อย่างเป็นทางการของ ${SITE.company} รวมสินค้าคุณภาพหลากหมวด สั่งง่ายผ่าน LINE จัดส่งทั่วประเทศ</p>
         ${lineBtn('px-5 py-2.5 text-sm', 'แอด LINE สั่งซื้อ')}
