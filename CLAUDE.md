@@ -55,17 +55,18 @@ P2W Shop\
 
 ## Progress
 ### Done ✅
-- (ยังไม่ได้เริ่ม)
+- สร้าง index.html — single-page catalog รวม 5 หมวด (frozen/bakery/pet/general/secondhand) พร้อมปุ่ม LINE OA ทุกจุด
+- สร้าง repo GitHub: https://github.com/p2winterplus-oss/P2W-Shop
+- Deploy GitHub Pages สำเร็จ → https://p2winterplus-oss.github.io/P2W-Shop/
 
 ### In Progress 🔄
 -
 
 ### Next ❌
-- สร้าง index.html (hub)
-- สร้าง frozen/index.html
-- สร้าง snack/index.html
-- สร้าง pet/index.html
-- สร้าง general/index.html
-- สร้าง secondhand/index.html
-- สร้าง repo GitHub
-- Deploy GitHub Pages
+- แทนรูป placehold.co ด้วยรูปสินค้าจริง
+- แก้ชื่อ/ราคา/รหัสสินค้าให้ตรงของจริง
+- ตั้ง redirect/proxy p2winterplus.com/shop → GitHub Pages (รอเว็บหลักพร้อม)
+
+## หมายเหตุ implementation
+- ตอนนี้ทำเป็น **single-page** (index.html หน้าเดียว โชว์ทั้ง 5 หมวดเป็น section + anchor link) ยังไม่ได้แยกเป็นโฟลเดอร์ย่อยตาม URL plan เดิม
+- git identity ของ repo (local): P2W Interplus / p2w.interplus@gmail.com
