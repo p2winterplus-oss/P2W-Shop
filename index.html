@@ -27,6 +27,12 @@
     .hlabel{font-weight:700;font-size:1.15rem;color:#fff;letter-spacing:.02em;}
     .hsub{font-size:.72rem;color:#cbd5e1;letter-spacing:.03em;}
 
+    /* ===== แสงวิ่งตามกรอบทอง ===== */
+    .band-wrap{position:relative;}
+    .beam-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:6;}
+    #beamRect{fill:none;stroke:#FCE9A6;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:90 1000;opacity:0;filter:drop-shadow(0 0 3px #D4AF37) drop-shadow(0 0 8px rgba(212,175,55,.85));}
+    @media (prefers-reduced-motion: reduce){ .beam-svg{display:none;} }
+
     @media(max-width:1023px){
       .hero-band{flex-direction:column;height:auto;}
       .hpanel{transform:none;min-height:118px;}
@@ -63,6 +69,7 @@
     </header>
 
     <!-- ANGLED PANELS -->
+    <div class="band-wrap">
     <div class="hero-band">
       <!-- 1. PAGE — เปลี่ยนรูปพื้นหลัง: แก้ background-image เป็น url('pic/page.jpg') -->
       <button type="button" class="hpanel" data-target="page">
@@ -96,6 +103,8 @@
           <span class="hsub">Shopee · Lazada</span>
         </div>
       </button>
+    </div>
+    <svg class="beam-svg" preserveAspectRatio="none" aria-hidden="true"><rect id="beamRect" pathLength="1000" fill="none"></rect></svg>
     </div>
 
     <p class="text-center text-xs text-slate-500 mt-4"><i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 inline -mt-0.5"></i> คลิกที่ Page หรือ Marketplace เพื่อเลือกช่องทางย่อย</p>
@@ -175,6 +184,43 @@
       });
     });
     lucide.createIcons();
+
+    /* ===== แสงวิ่งตามกรอบทอง (สุ่มจังหวะ/จุดเริ่ม/จุดหาย) ===== */
+    (function(){
+      var wrap = document.querySelector('.band-wrap');
+      var svg  = document.querySelector('.beam-svg');
+      var rect = document.getElementById('beamRect');
+      if (!wrap || !svg || !rect || !rect.animate) return;
+
+      function sizeBeam(){
+        var w = wrap.clientWidth, h = wrap.clientHeight;
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        rect.setAttribute('x', 1.5); rect.setAttribute('y', 1.5);
+        rect.setAttribute('width', Math.max(0, w - 3));
+        rect.setAttribute('height', Math.max(0, h - 3));
+        rect.setAttribute('rx', 16); rect.setAttribute('ry', 16);
+      }
+      var rand = function(a, b){ return a + Math.random() * (b - a); };
+
+      function runBeam(){
+        var dur   = rand(1300, 3000);        // ระยะเวลาแบบสุ่ม
+        var start = rand(0, 1000);           // จุดเริ่มแบบสุ่ม
+        var dist  = rand(0.30, 0.95) * 1000; // ระยะที่วิ่งก่อนหาย (จุดหายสุ่ม)
+        rect.style.strokeDashoffset = start;
+        var anim = rect.animate([
+          { strokeDashoffset: start,        opacity: 0,   offset: 0 },
+          { strokeDashoffset: start - dist*0.12, opacity: 1, offset: 0.12 },
+          { strokeDashoffset: start - dist*0.82, opacity: 1, offset: 0.82 },
+          { strokeDashoffset: start - dist,  opacity: 0,   offset: 1 }
+        ], { duration: dur, easing: 'linear' });
+        anim.onfinish = function(){ setTimeout(runBeam, rand(350, 2800)); };
+      }
+
+      sizeBeam();
+      setTimeout(sizeBeam, 300);
+      window.addEventListener('resize', sizeBeam);
+      runBeam();
+    })();
   </script>
 </body>
 </html>
