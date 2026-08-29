@@ -13,27 +13,33 @@
 
 ## โครงสร้าง URL
 ```
-/shop              → hub เลือกหมวดสินค้า
-/shop/frozen       → อาหารแช่แข็ง
-/shop/bakery       → อาหารแปรรูป ขนม เค้ก
-/shop/pet          → อาหารสัตว์
-/shop/general      → สินค้าทั่วไป
-/shop/secondhand   → สินค้ามือสอง
+/shop                    → landing P2W INTERPLUS (เลือก Page / Website / Marketplace)
+/shop/store              → hub ร้าน Infinis Foods (เลือกหมวดสินค้า)
+/shop/store/frozen       → อาหารแช่แข็ง
+/shop/store/bakery       → อาหารแปรรูป ขนม เค้ก
+/shop/store/pet          → อาหารสัตว์
+/shop/store/general      → สินค้าทั่วไป
+/shop/store/secondhand   → สินค้ามือสอง
 ```
 
 ## โครงสร้างไฟล์
 ```
 P2W Shop\
-  index.html                 → hub (หน้าแรก: อธิบายหมวด + วิธีสั่งซื้อ + ข้อมูลบริษัท)
-  assets\app.js              → shared component (header/footer/สินค้า) + ข้อมูลร้าน + ข้อมูลสินค้า
-  frozen\index.html          → อาหารแช่แข็ง (ธีมฟ้า sky)
-  bakery\index.html          → ขนม เค้ก เบเกอรี่ (ธีมส้ม orange)
-  pet\index.html             → อาหารสัตว์ (ธีมเขียว emerald)
-  general\index.html         → สินค้าทั่วไป (ธีมม่วง indigo)
-  secondhand\index.html      → สินค้ามือสอง (ธีมเหลือง amber)
+  index.html                     → landing P2W INTERPLUS (3 หัวข้อ: Page / Website / Marketplace)
+  logo.png                       → โลโก้ P2W INTERPLUS (ใช้ในหน้า landing)
+  store\
+    index.html                   → hub Infinis Foods (อธิบายหมวด + วิธีสั่งซื้อ + ข้อมูลบริษัท)
+    assets\app.js                → shared component (header/footer/สินค้า) + ข้อมูลร้าน + ข้อมูลสินค้า
+    assets\infinis-mark.png      → โลโก้ Infinis Foods (JF ทอง) / line-qr.jpg = QR LINE
+    frozen\index.html            → อาหารแช่แข็ง (ธีมฟ้า sky)
+    bakery\index.html            → ขนม เค้ก เบเกอรี่ (ธีมส้ม orange)
+    pet\index.html               → อาหารสัตว์ (ธีมเขียว emerald)
+    general\index.html           → สินค้าทั่วไป (ธีมม่วง indigo)
+    secondhand\index.html        → สินค้ามือสอง (ธีมเหลือง amber)
 ```
 
-> **แก้ข้อมูลสินค้า/ร้าน**: แก้ที่ `assets\app.js` ไฟล์เดียว (ตัวแปร `SITE` = ข้อมูลร้าน, `PRODUCTS` = สินค้าแต่ละหมวด) header/footer/การ์ดสินค้าทุกหน้าดึงจากที่นี่
+> **Landing** (`index.html`): 3 หัวข้อ — Page (เพจ FB: pingstores/ShiftUp/Infinis), Website (→ `store/`), Marketplace (Shopee/Lazada: pingstores/p2winterplus/infinis — **ลิงก์ยังเป็น placeholder "เร็วๆ นี้"** รอใส่จริง)
+> **แก้ข้อมูลสินค้า/ร้าน**: แก้ที่ `store\assets\app.js` ไฟล์เดียว (ตัวแปร `SITE` = ข้อมูลร้าน, `PRODUCTS` = สินค้าแต่ละหมวด) header/footer/การ์ดสินค้าทุกหน้าดึงจากที่นี่
 
 ## ลูกค้าแต่ละหมวด
 | หมวด | กลุ่มลูกค้า |
