@@ -9,7 +9,7 @@ const SITE = {
   brandSub: 'BY P2W INTERPLUS',
   company: 'P2W INTERPLUS CO., LTD.',
   phone: '088-788-8364',
-  email: 'p2w.interplus@gmail.com',
+  email: 'adm.p2winterplus@gmail.com',
   address: '49/306 ซ.นิมิตใหม่ 40 ถ.นิมิตใหม่ แขวงสามวาตะวันออก เขตคลองสามวา กรุงเทพฯ 10510',
   line: 'https://lin.ee/wnizCXu',
   lineName: 'Line Official',

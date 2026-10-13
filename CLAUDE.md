@@ -59,7 +59,7 @@ P2W Shop\
 
 ## Contact Info
 - Phone: 088-788-8364
-- Email: p2w.interplus@gmail.com
+- Email: adm.p2winterplus@gmail.com
 - Line OA: https://lin.ee/QJax26d
 
 ## Progress
@@ -81,4 +81,4 @@ P2W Shop\
 - โครงสร้าง **multi-page**: หน้าแรก `index.html` เป็น hub, แต่ละหมวดแยกโฟลเดอร์ (`/frozen/`, `/bakery/`, `/pet/`, `/general/`, `/secondhand/`) → map กับ URL `/shop/<หมวด>/`
 - header/footer/การ์ดสินค้า render จาก `assets/app.js` (Tailwind Play CDN สร้าง class จาก DOM ที่ inject ได้) — แก้ครั้งเดียวมีผลทุกหน้า
 - ทุก link ใช้ relative path (`../frozen/` ฯลฯ) → ทำงานได้ทั้งบน github.io และ p2winterplus.com/shop
-- git identity ของ repo (local): P2W Interplus / p2w.interplus@gmail.com
+- git identity ของ repo (local): P2W Interplus / adm.p2winterplus@gmail.com
